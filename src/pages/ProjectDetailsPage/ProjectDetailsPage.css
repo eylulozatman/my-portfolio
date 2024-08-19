@@ -1,0 +1,14 @@
+.project-details-page {
+    padding: 20px;
+  }
+  
+  .project-details-page .project-images {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .project-details-page .project-images img {
+    max-width: 100%;
+    height: auto;
+  }
+  

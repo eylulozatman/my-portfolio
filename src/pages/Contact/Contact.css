@@ -1,0 +1,28 @@
+/* src/pages/ContactPage/ContactPage.css */
+.contact-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    font-size: 1.2em;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  .contact-info a {
+    color: #0073b1; /* LinkedIn'in renk tonu */
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
