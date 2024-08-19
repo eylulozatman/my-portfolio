@@ -1,4 +1,4 @@
-.custom-button {
+.rotate-button {
     background-color: #A5C9CA; /* Primary color */
     border: none;
     color: #2C3333;
@@ -15,20 +15,22 @@
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
   }
   
-  .custom-button:hover {
+   
+  .rotate-button:hover {
     background-color: #6c898a; 
     color: #E7F6F2;
   }
   
-  .custom-button:active {
+  .rotate-button:active {
     background-color: #516565; 
     color: #E7F6F2;
   }
   
-  .custom-button:disabled {
+  .rotate-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
-  
