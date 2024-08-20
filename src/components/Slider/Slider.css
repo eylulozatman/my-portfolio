@@ -1,0 +1,45 @@
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Slider boyutunu sabitler */
+    overflow: hidden;
+  }
+  
+  .slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; 
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    display: none;
+  }
+  
+  .slider-image.active {
+    display: block;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }

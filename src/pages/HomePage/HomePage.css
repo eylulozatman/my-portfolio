@@ -18,7 +18,6 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: aliceblue;
   gap: 12%;
 }
 
@@ -30,8 +29,7 @@ main {
 
 
 .name-sec {
-  margin-top: 20px;
-  padding: 3%;
+  padding: 4%;
   border-radius: 3%;
   display: flex;
   flex-direction: column;
@@ -43,7 +41,18 @@ main {
 .name-sec h1 {
   display: flex;
   flex-wrap: wrap;
+  color:black;
   margin-bottom: -10px;
+}
+
+.name-sec:hover{
+   background-color: #233439;
+   color: rgb(82, 94, 102);
+}
+
+.name-sec:hover h1{
+  background-color: #233439;
+  color: rgb(82, 94, 102);
 }
 
 
@@ -56,8 +65,7 @@ main {
 }
 
 .projects-btn i {
-
-  margin-right: 10px;
+  margin-left: 15px;
   font-size: 35px;
 }
 
@@ -70,7 +78,6 @@ main {
   padding: 40px 20px;
   text-align: center;
   width: 80%;
-  color: aliceblue;
   margin: 0 auto;
 
 }

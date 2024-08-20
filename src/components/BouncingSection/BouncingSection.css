@@ -2,17 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
     border-radius: 10px;
-    background-color: #395B64;
     cursor: pointer;
     margin-top: 20px;
+   
   }
-  
+
   .bouncing-section h1, .bouncing-section h2 {
     margin: 0;
-    color: aliceblue;
     font-family: cursive;
   }
+  
   

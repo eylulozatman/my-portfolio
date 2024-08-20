@@ -1,14 +1,73 @@
 .project-details-page {
-    padding: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #395B64;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex: 1;
+}
+
+.project-info {
+  width: 100%;
+  max-width: 900px;
+  height: 200px; /* Sabit yükseklik */
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* İçerik taşmasını engeller */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+#descript {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: larger;
+  gap: 10px;
+  text-align: center; /* İçeriği ortalar */
+}
+
+.project-links {
+
+  width: 50%;
+  display: flex;
+  justify-content:center;
+  color: antiquewhite;
+  border: #395B64 2px solid;
+  border-radius: 5%;
+}
+
+.project-links a {
+  margin-left: 20px;
+  border: #395B64 2px solid;
+  border-radius: 5%;
+  background-color: #A5C9CA; 
+  display: flex;
+  color: #395B64;
+  padding: 3%;
   
-  .project-details-page .project-images {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .project-details-page .project-images img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+}
+
+.project-images {
+  width: 100%;
+  max-width: 800px;
+  height: 400px; /* Sabit yükseklik */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}

@@ -3,8 +3,9 @@ import './HomePage.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import BouncingSection  from '../../components/BouncingSection/BouncingSection ';
+import Button from '../../components/Button/Button';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import RotateButton from '../../components/RotateButton/RotateButton';
+
 
 
 function HomePage() {
@@ -13,19 +14,22 @@ function HomePage() {
       <Header />
       <main >
         <section className="hero-section">
-        <BouncingSection>
-          <section className='name-sec'>   
+      
+        <BouncingSection>  
+          <section className='name-sec'> 
             <h1>Eylül Özatman</h1>
             <h2>Software Engineer</h2>   
           </section>
         </BouncingSection>
           
          
-          <section className='projects-btn'> 
-          <i class="bi bi-arrow-bar-down"></i>
-            <RotateButton onClick={() => window.location.href = '/projects'}>
-              My Projects
-            </RotateButton>
+        <section className='projects-btn'>
+            <i className="bi bi-arrow-bar-down"></i>
+            <BouncingSection>
+              <Button onClick={() => window.location.href = '/projects'}>
+                My Projects
+              </Button>
+            </BouncingSection>
           </section>
         
         </section>

@@ -11,7 +11,7 @@ const BouncingSection = ({ children }) => {
   const handleClick = () => {
     api.start({
       to: [
-        { y: -20 }, // Zıplama hareketi için yukarıya doğru hareket
+        { y: -5 }, // Zıplama hareketi için yukarıya doğru hareket
         { y: 0 },   // Eski pozisyona geri dönme
       ],
       reset: true, 
