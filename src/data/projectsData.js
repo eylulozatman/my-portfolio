@@ -43,20 +43,20 @@ const projectsData = [
     {
       id: 6,
       title: 'Auto Tic-Tac-Toe',
-      description: 'This is a detailed description of Project Two.',
-      links:['github','http://aviseylul2.azurewebsites.net'],
+      description: 'It is a tic-tac-toe game written in C++, where both sides are "computers". You can review the codes in the github repo at the link below:',
+      links:['https://github.com/eylulozatman/tictactoe_auto'],
 
-      thumbnail: 'url-to-thumbnail-image-two',
-      detailedImages: ['url-to-image-three', 'url-to-image-four']
+      thumbnail: '/photos/tictac.png',
+      detailedImages: ['/photos/tictactoe.png']
     },
     {
       id: 7,
-      title: 'Mining Game with JAVA GUI',
-      description: 'This is a detailed description of Project Two.',
-      links:['github','youtube'],
+      title: 'Sahibinden clone',
+      description: 'This project is a small-scale clone project of Sahibinden.com developed using flask. Products are displayed in various categories, more detailed information can be obtained from the detail page that appears when you click on the products. The category bar on the left is active and brings products in the category you want. You can also search for keywords from the search bar.',
+      links:['https://github.com/eylulozatman/sahibindenFlask','https://flasksahibinden.azurewebsites.net'],
 
-      thumbnail: 'url-to-thumbnail-image-two',
-      detailedImages: ['url-to-image-three', 'url-to-image-four']
+      thumbnail: '/photos/sahib.png',
+      detailedImages: ['/photos/sahib.png', '/photos/sahib1.png','/photos/sahib2.png', '/photos/sahib3.png']
     }
     // Diğer projeler...
   ];
