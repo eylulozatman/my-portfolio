@@ -77,6 +77,7 @@ h1 {
 
   .project-details-page {
     display: flex;
+    font-family:Arial, Helvetica, sans-serif;
     flex-direction: column;
     min-height: 100vh;
     background-color: #395B64;
@@ -87,14 +88,15 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3%;
+    height: 100%;
+    width: 100%;
    
   }
   
   .project-info-detail {
     width: 100%;
     max-width: 100vw;
-    height: 60vh; 
+    height: 90%; 
     display: flex;
     flex-direction: column;    
     justify-content: center;
@@ -118,7 +120,7 @@ h1 {
   
   .project-links {
 
-    width: 80vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -131,7 +133,7 @@ h1 {
   .project-images {
     width: 100%;
     max-width: 100%;
-    height: 50vh; /* Sabit yükseklik */
+    height: 80%; /* Sabit yükseklik */
     display: flex;
     justify-content: center;
     align-items: center;
