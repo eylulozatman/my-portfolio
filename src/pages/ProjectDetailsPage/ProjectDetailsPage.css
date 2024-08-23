@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #395B64;
+  background-color: #A5C9CA; /* Primary color */
 }
 
 .container {
@@ -28,8 +28,12 @@
   overflow: hidden; /* İçerik taşmasını engeller */
 }
 
-h1 {
+#project-title {
   text-align: center;
+  border: 2px solid #333;
+  border-radius: 5px; 
+  padding: 2%;
+
  
 }
 
@@ -42,24 +46,28 @@ h1 {
 }
 
 .project-links {
-
   width: 50%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   color: antiquewhite;
-  border: #395B64 2px solid;
-  border-radius: 5%;
 }
 
 .project-links a {
   margin-left: 20px;
-  border: #395B64 2px solid;
-  border-radius: 5%;
-  background-color: #A5C9CA; 
+  border: 2px solid #A5C9CA;
+  border-radius: 5px; /* Köşe yuvarlaklığını arttırdım */
+  background-color: #395B64; 
+  color: antiquewhite;
+  padding: 10px 20px; /* Daha dengeli bir padding verdim */
+  text-decoration: none; /* Altı çizili olmaması için */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hover efekti için */
   display: flex;
-  color: #395B64;
-  padding: 3%;
-  
+  align-items: center; /* Dikeyde ortalama */
+}
+
+.project-links a:hover {
+  background-color: #1e3035; /* Hover durumda renk değişimi */
+  color: #ffffff; /* Yazı rengini beyaz yapma */
 }
 
 .project-images {
@@ -80,7 +88,7 @@ h1 {
     font-family:Arial, Helvetica, sans-serif;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #395B64;
+    
   }
   
   .container {
@@ -124,11 +132,10 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content:center;
-    color: antiquewhite;
-    border: #395B64 2px solid;
-    border-radius: 5%;
     gap: 4%;
   }
+
+ 
   
   .project-images {
     width: 100%;

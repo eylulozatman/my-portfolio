@@ -1,23 +1,22 @@
 .projects-page {
-  padding: 20px;
-  margin: 0;
-  overflow-x: hidden; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #395B64;
+  background-color: #A5C9CA; 
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #title {
   text-align: center;
   margin-bottom: 40px;
-  color: antiquewhite;
+  color:#333;
 }
 
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Her satırda 2 proje görünecek */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px; /* Projeler arasındaki boşluk */
+  
 }
 
 .project-item {
@@ -28,14 +27,17 @@
   display: flex;
   flex-direction: row; /* Proje öğelerinin yan yana yerleşimi */
   align-items: center;
-  background-color: #314e56;  
+  background-color: #86a6a7;
 }
+.project-item:hover {
 
+  background-color: #789798;
+}
 .project-info {
   width: 60%;
   display: flex;
   flex-direction: column;
-  color: antiquewhite;
+  color: #1c1f20;
   padding-right: 10px; /* Sağ boşluk */
   justify-content: space-between;
   margin-right: 2%;
@@ -68,8 +70,8 @@
   color: antiquewhite;
 }
 
-h1 {
-  color: antiquewhite;
+#project-title {
+  color: #1c1f20;
 }
 
 @media (max-width: 768px) {
@@ -81,14 +83,14 @@ h1 {
     margin: 0;
     padding: 0;
     flex-direction: column;
-    background-color: #395B64;
+   
   }
   
 
   #title {
     text-align: center;
     margin-bottom: 5%;
-    color: antiquewhite;
+   
   }
 
   .projects-list {
@@ -118,8 +120,6 @@ h1 {
     justify-content: center;
     width: 70%;
     height: 40%;
-    background-color: #c54c0f;
-    color: #1c1f20;
     border-radius: 4%;
     text-align:center;
   }
@@ -131,7 +131,6 @@ h1 {
   height: 80%;
   display: flex;
   flex-direction: column;
-  color: antiquewhite;
   align-items: center;
   justify-content: center;
   

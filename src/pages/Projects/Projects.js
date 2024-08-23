@@ -18,7 +18,7 @@ function Projects() {
           
           <div className="project-item">
               <div className='project-info'>
-                <h1>{project.title}</h1>
+                <h1 id='project-title'>{project.title}</h1>
                 <p>{project.description.substring(0, 100)}...</p>
                 <div className='link'>
                   <Link to={`/projects/${project.id}`}><i className="bi bi-arrow-bar-right"></i> View Details</Link>

@@ -2,14 +2,19 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #395B64;
+  background-color: #A5C9CA; /* Primary color */
+
 }
+
+/* background-color: #86a6a7; */
+
 
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  font-family: cursive;
+  font-family: 'Noto Sans', sans-serif;
+  color: 333;
 }
 
 .hero-section {
@@ -27,35 +32,34 @@ main {
   margin-bottom: -10px;
 }
 
-
 .name-sec {
   padding: 4%;
   border-radius: 3%;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Moved box-shadow here */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   gap: 10px;
+  background-color: #86a6a7;
+  color: #333;
 }
 
 .name-sec h1 {
   display: flex;
   flex-wrap: wrap;
-  color:black;
+  color: #333; /* Renk formatını düzelttim */
   margin-bottom: -10px;
 }
 
-.name-sec:hover{
-   background-color: #233439;
-   color: rgb(82, 94, 102);
+.name-sec:hover {
+  background-color: #333;
+  color: #A5C9CA;
 }
 
-.name-sec:hover h1{
-  background-color: #233439;
-  color: rgb(82, 94, 102);
+.name-sec:hover h1 {
+  background-color: #333;
+  color: #A5C9CA;
 }
-
-
 
 .projects-btn {
   align-items: center; /* Ensure vertical alignment */

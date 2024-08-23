@@ -4,13 +4,13 @@
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
-  
+    
    
   }
 
   .bouncing-section h1, .bouncing-section h2 {
     margin: 0;
-    font-family: cursive;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
   

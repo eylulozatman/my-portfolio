@@ -1,7 +1,7 @@
 .custom-button {
-    background-color: #A5C9CA; /* Primary color */
+    background-color: #395B64;
     border: none;
-    color: #2C3333;
+    color: antiquewhite;
     font-weight: bolder;
     text-align: center;
     text-decoration: none;
@@ -14,17 +14,19 @@
     padding-bottom: 10%;
     cursor: pointer;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Hafif gölge ekleyelim */
 
   }
   
   .custom-button:hover {
-    background-color: #6c898a; 
+    background-color: #333; 
     color: #E7F6F2;
   }
   
   .custom-button:active {
-    background-color: #516565; 
+    background-color: #333; 
     color: #E7F6F2;
   }
   
