@@ -19,7 +19,7 @@ function ProjectDetailsPage() {
     <div className="project-details-page">
      <Header/>
      <div className='container'>
-      <div className='project-info'>
+      <div className='project-info-detail'>
         <h1>{project.title}</h1>
           <div id='descript'>{project.description}</div>
               <div className='project-links'>

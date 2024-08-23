@@ -1,10 +1,10 @@
 .bouncing-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
+  
    
   }
 

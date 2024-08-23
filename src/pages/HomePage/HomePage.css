@@ -96,3 +96,34 @@ main {
   margin-top: 20px;
   font-size: 35px;
 }
+
+
+@media (max-width: 768px) {
+
+  main {
+   
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  }
+
+
+  .projects-btn {
+    padding-right: 15%;
+    align-items: center; /* Ensure vertical alignment */
+    margin-top: 20px;
+  
+  }
+  
+}

@@ -1,9 +1,8 @@
 .projects-page {
   padding: 20px;
-  display: flex;
   margin: 0;
-  padding: 0;
   overflow-x: hidden; 
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: #395B64;
@@ -17,44 +16,42 @@
 
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  justify-content: center; /* Center the items horizontally */
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr); /* Her satırda 2 proje görünecek */
+  gap: 20px; /* Projeler arasındaki boşluk */
 }
 
 .project-item {
-  margin: 10px;
   border: 1px solid #ddd;
+  height: 30vh;
   padding: 8%;
   border-radius: 10px;
   display: flex;
-  height: 200px; /* Sabit yükseklik */
+  flex-direction: row; /* Proje öğelerinin yan yana yerleşimi */
+  align-items: center;
+  background-color: #314e56;  
 }
 
 .project-info {
-  flex: 6;
+  width: 60%;
   display: flex;
   flex-direction: column;
   color: antiquewhite;
-  padding-right: 30px;
+  padding-right: 10px; /* Sağ boşluk */
   justify-content: space-between;
-
-  
+  margin-right: 2%;
 }
 
 .project-photo {
-  flex: 4; 
+  width: 40%;
   display: flex;
   align-items: center;
-  margin-left: 2%;
   justify-content: center;
 }
 
 .project-item img {
-  width: 80%;
+  width: 100%;
   height: auto;
   border-radius: 3%;
-
 }
 
 .link {
@@ -73,4 +70,77 @@
 
 h1 {
   color: antiquewhite;
+}
+
+@media (max-width: 768px) {
+
+  .projects-page {
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background-color: #395B64;
+  }
+  
+
+  #title {
+    text-align: center;
+    margin-bottom: 5%;
+    color: antiquewhite;
+  }
+
+  .projects-list {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+ 
+  }
+  
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 2%;
+    height: 40vh;
+    min-height: max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    
+  }
+
+  .link {
+    justify-content: center;
+    width: 45vw;
+    height: 3vh;
+    background-color: #c54c0f;
+    color: #1c1f20;
+    border-radius: 4%;
+    text-align:center;
+  }
+
+  
+ 
+.project-info {
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: antiquewhite;
+  align-items: center;
+  justify-content: center;
+  
+}
+  
+  .project-photo {
+    margin-top: 2%; 
+    display: flex;
+  
+  }
+
 }
