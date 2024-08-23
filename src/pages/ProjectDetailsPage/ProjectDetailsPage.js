@@ -20,7 +20,7 @@ function ProjectDetailsPage() {
      <Header/>
      <div className='container'>
       <div className='project-info-detail'>
-        <h1 id='project-title'>{project.title}</h1>
+        <h1 id='project-title-d'>{project.title}</h1>
           <div id='descript'>{project.description}</div>
               <div className='project-links'>
               {project.links.map((link, index) => (
