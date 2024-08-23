@@ -26,7 +26,7 @@ function HomePage() {
         <section className='projects-btn'>
             <i className="bi bi-arrow-bar-down"></i>
             <BouncingSection>
-              <Button onClick={() => window.location.href = '/projects'}>
+              <Button onClick={() => window.location.href = '#/projects'}>
                 My Projects
               </Button>
             </BouncingSection>
