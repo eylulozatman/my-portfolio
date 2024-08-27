@@ -6,9 +6,6 @@
 
 }
 
-/* background-color: #86a6a7; */
-
-
 main {
   flex: 1;
   display: flex;
@@ -62,14 +59,20 @@ main {
 }
 
 .projects-btn {
-  align-items: center; /* Ensure vertical alignment */
+  align-items: center;
   margin-left: 40px;
   margin-top: 20px;
+}
+
+#pbtn {
+  
+  padding: 5%;
 
 }
 
+
 .projects-btn i {
-  margin-left: 15px;
+
   font-size: 35px;
 }
 

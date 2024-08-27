@@ -1,18 +1,44 @@
-/* src/pages/ContactPage/ContactPage.css */
 .contact-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #A5C9CA; /* Primary color */
+  
+  }
+
+
+  .main{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  color: #333;
+
   }
   
+  
   .contact-page h1 {
-    font-size: 2em;
     margin-bottom: 20px;
   }
   
   .contact-info {
-    font-size: 1.2em;
+    background-color: #86a6a7;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 4%;
+    margin-bottom: 5%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Hafif gölge ekleyelim */
+    
   }
-  
+
+
   .contact-info p {
     margin: 10px 0;
   }

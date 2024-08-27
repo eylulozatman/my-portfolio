@@ -3,6 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
+
+
 function Header() {
   const navigate = useNavigate();
 
@@ -10,11 +12,20 @@ function Header() {
     navigate(-1); // Bir önceki sayfaya geri döner
   };
 
+  const contactPage = () => { window.location.href = '#/contact'}
+
   return (
     <header className="header">
-      <button className="back-button" onClick={handleBackClick}>
-        Home
-      </button>
+
+      <div className='btn-container'>
+        <button  id="back-button" onClick={handleBackClick}>
+          Home
+        </button>
+        <button  id="contact-button" onClick={contactPage}>
+          Contact
+        </button>
+      </div>
+ 
       <h1 className="header-title">My Portfolio</h1>
     </header>
   );
