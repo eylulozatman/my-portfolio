@@ -82,6 +82,18 @@ const projectsData = [
       process.env.PUBLIC_URL + '/photos/sahib2.png', 
       process.env.PUBLIC_URL + '/photos/sahib3.png'
     ]
+  },
+  {
+    id: 8,
+    title: 'Rick and Morty API',
+    description: 'This project is an improved example of https://rickandmortyapi.com/. It allows to build armaa according to locations and episodes and also filters according to gender.',
+    links:['https://github.com/eylulozatman/RickAndMortyAPI','https://eylulozatman.github.io/RickAndMortyAPI/'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/rick1.png',
+    detailedImages: [
+      process.env.PUBLIC_URL + '/photos/rick1.png', 
+      process.env.PUBLIC_URL + '/photos/rick2.png',
+      process.env.PUBLIC_URL + '/photos/rick3.png'
+    ]
   }
 ];
 
