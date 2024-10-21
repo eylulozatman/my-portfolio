@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import projectsData from '../../data/projectsData';
 import './Projects.css';
 import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import BouncingSection from '../../components/BouncingSection/BouncingSection';
+import BouncingSection from '../../components/BouncingSection/BouncingSection '
+
+
 
 function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -75,7 +76,7 @@ function Projects() {
           &gt;
         </button>
       </div>
-      <Footer />
+
     </div>
   );
 }
