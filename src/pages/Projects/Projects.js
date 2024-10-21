@@ -50,7 +50,6 @@ function Projects() {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="pagination">
         <button
           className="page-arrow"
