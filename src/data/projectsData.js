@@ -100,7 +100,7 @@ const projectsData = [
   {
     id: 9,
     title: 'Currency Converter',
-    description: 'This project was developed to filter Turkish words briefly. After any keyword is written, for example, words starting with "n", containing "n" and ending with "n" are listed. First of all, you will need this command, then you can use this api and make improvements with npm install tdk-all-api --save.e.',
+    description: 'This project is a currency program written with react. It contains 3 types of currency (usd, try and euro). I used this call "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json" to get the currency rates, but it would be useful to check if these rates are up to date. A simple but useful project that converts 3 currencies to each other.',
     links:['https://github.com/eylulozatman/currency-converter.git', 'https://eylulozatman.github.io/currency-converter/'],
     thumbnail: process.env.PUBLIC_URL + '/photos/exch1.png',
     detailedImages: [
