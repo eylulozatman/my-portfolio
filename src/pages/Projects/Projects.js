@@ -20,25 +20,29 @@ function Projects() {
 
   // Handle pagination click
   const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    if (pageNumber >= 1 && pageNumber <= totalPages) {
+      setCurrentPage(pageNumber);
+    }
   };
 
   return (
     <div className="projects-page">
       <Header />
-      <h1 id='title'>Projects</h1>
+      <h1 id="title">Projects</h1>
       <div className="projects-list">
         {currentProjects.map((project) => (
           <BouncingSection key={project.id}>
             <div className="project-item">
-              <div className='project-info'>
-                <h1 id='project-title'>{project.title}</h1>
+              <div className="project-info">
+                <h1 id="project-title">{project.title}</h1>
                 <p>{project.description.substring(0, 100)}...</p>
-                <div className='link'>
-                  <Link to={`/projects/${project.id}`}><i className="bi bi-arrow-bar-right"></i> View Details</Link>
+                <div className="link">
+                  <Link to={`/projects/${project.id}`}>
+                    <i className="bi bi-arrow-bar-right"></i> View Details
+                  </Link>
                 </div>
               </div>
-              <div className='project-photo'>
+              <div className="project-photo">
                 <img src={project.thumbnail} alt={project.title} />
               </div>
             </div>
@@ -48,6 +52,13 @@ function Projects() {
 
       {/* Pagination */}
       <div className="pagination">
+        <button
+          className="page-arrow"
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          &lt;
+        </button>
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index + 1}
@@ -57,6 +68,13 @@ function Projects() {
             {index + 1}
           </button>
         ))}
+        <button
+          className="page-arrow"
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
+          &gt;
+        </button>
       </div>
       <Footer />
     </div>
