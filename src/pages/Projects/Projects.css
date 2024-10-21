@@ -9,14 +9,14 @@
 #title {
   text-align: center;
   margin-bottom: 40px;
-  color:#333;
+  color: #333;
 }
 
 .projects-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   gap: 20px; /* Projeler arasındaki boşluk */
-  
+  padding: 0 20px;
 }
 
 .project-item {
@@ -28,11 +28,13 @@
   flex-direction: row; /* Proje öğelerinin yan yana yerleşimi */
   align-items: center;
   background-color: #86a6a7;
+  transition: background-color 0.3s ease;
 }
-.project-item:hover {
 
+.project-item:hover {
   background-color: #789798;
 }
+
 .project-info {
   width: 60%;
   display: flex;
@@ -74,12 +76,13 @@
   color: #1c1f20;
 }
 
-
+/* Pagination Style */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px; /* Üst boşluk */
+  margin-bottom: 40px; /* Alt boşluk */
 }
 
 .page-button,
@@ -92,6 +95,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .page-button.active {
@@ -112,34 +116,30 @@
 .page-arrow {
   font-size: 20px;
 }
+
 @media (max-width: 768px) {
 
   .projects-page {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
     flex-direction: column;
-   
   }
   
-
   #title {
     text-align: center;
     margin-bottom: 5%;
-   
   }
 
   .projects-list {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1%;
     height: 90%;
- 
   }
   
   .project-item {
@@ -151,7 +151,6 @@
     justify-content: center;
     align-items: center;
     padding: 2%;
-    
   }
 
   .link {
@@ -159,64 +158,36 @@
     width: 70%;
     height: 40%;
     border-radius: 4%;
-    text-align:center;
+    text-align: center;
   }
-
   
- 
-.project-info {
-  width: 90%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-}
+  .project-info {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   
   .project-photo {
     margin-top: 2%; 
     display: flex;
-  
   }
 
   .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   
   .page-button,
   .page-arrow {
-    background-color: #86a6a7;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .page-button.active {
-    background-color: #314c54;
-    color: white;
-  }
-  
-  .page-button:hover,
-  .page-arrow:hover {
-    background-color: #314c54;
-  }
-  
-  .page-arrow[disabled] {
-    background-color: #ddd;
-    cursor: not-allowed;
+    padding: 8px 12px;
+    margin: 0 3px;
+    font-size: 14px;
   }
   
   .page-arrow {
-    font-size: 20px;
+    font-size: 18px;
   }
-  
-
 }
