@@ -25,15 +25,16 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'TDK word Search',
-    description: 'This project was developed to filter Turkish words briefly. After any keyword is written, for example, words starting with "n", containing "n" and ending with "n" are listed. First of all, you will need this command, then you can use this api and make improvements with npm install tdk-all-api --save.e.',
-    links:['https://github.com/eylulozatman/TDKwordSearch'],
-    thumbnail: process.env.PUBLIC_URL + '/photos/tdk3.png',
+    title: 'Rick and Morty API',
+    description: 'This project is an improved example of https://rickandmortyapi.com/. It allows to build armaa according to locations and episodes and also filters according to gender.',
+    links:['https://github.com/eylulozatman/RickAndMortyAPI','https://eylulozatman.github.io/RickAndMortyAPI/'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/rick1.png',
     detailedImages: [
-      process.env.PUBLIC_URL + '/photos/tdk1.png', 
-      process.env.PUBLIC_URL + '/photos/tdk2.png',
-      process.env.PUBLIC_URL + '/photos/tdk3.png'
+      process.env.PUBLIC_URL + '/photos/rick1.png', 
+      process.env.PUBLIC_URL + '/photos/rick2.png',
+      process.env.PUBLIC_URL + '/photos/rick3.png'
     ]
+   
   },
   {
     id: 4,
@@ -85,16 +86,32 @@ const projectsData = [
   },
   {
     id: 8,
-    title: 'Rick and Morty API',
-    description: 'This project is an improved example of https://rickandmortyapi.com/. It allows to build armaa according to locations and episodes and also filters according to gender.',
-    links:['https://github.com/eylulozatman/RickAndMortyAPI','https://eylulozatman.github.io/RickAndMortyAPI/'],
-    thumbnail: process.env.PUBLIC_URL + '/photos/rick1.png',
+    title: 'TDK word Search',
+    description: 'This project was developed to filter Turkish words briefly. After any keyword is written, for example, words starting with "n", containing "n" and ending with "n" are listed. First of all, you will need this command, then you can use this api and make improvements with npm install tdk-all-api --save.e.',
+    links:['https://github.com/eylulozatman/TDKwordSearch'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/tdk3.png',
     detailedImages: [
-      process.env.PUBLIC_URL + '/photos/rick1.png', 
-      process.env.PUBLIC_URL + '/photos/rick2.png',
-      process.env.PUBLIC_URL + '/photos/rick3.png'
+      process.env.PUBLIC_URL + '/photos/tdk1.png', 
+      process.env.PUBLIC_URL + '/photos/tdk2.png',
+      process.env.PUBLIC_URL + '/photos/tdk3.png'
     ]
+      
+  },
+  {
+    id: 9,
+    title: 'Currency Converter',
+    description: 'This project was developed to filter Turkish words briefly. After any keyword is written, for example, words starting with "n", containing "n" and ending with "n" are listed. First of all, you will need this command, then you can use this api and make improvements with npm install tdk-all-api --save.e.',
+    links:['https://github.com/eylulozatman/currency-converter.git', 'https://eylulozatman.github.io/currency-converter/'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/exch1.png',
+    detailedImages: [
+      process.env.PUBLIC_URL + '/photos/exch4.png', 
+      process.env.PUBLIC_URL + '/photos/exch2.png',
+      process.env.PUBLIC_URL + '/photos/exch3.png'
+    ]
+      
   }
 ];
+
+
 
 export default projectsData;
