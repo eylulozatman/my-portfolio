@@ -63,7 +63,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: '',
+    title: 'White Nights Book Club (newest project)',
     description: 'This project aims to allow users to write reviews about the books they read.In my project, which generally consists of 5 sections, there is a welcome page, a registration and login page, a home page where we can see the book reviews of all users, a detail page where we can access the book details and read the entire review, a user profile page where we can visit the user profile and only show the book reviews of that user. I hope you find this work, which aims to increase the interaction of people who read books and are interested in writing, useful. Don`t forget to like the user reviews you like :) Flask and firebase technologies were used in the project.',
     links:['https://github.com/eylulozatman/whitenightsbookclub'],
     thumbnail: process.env.PUBLIC_URL + '/photos/wnbc1.png',
