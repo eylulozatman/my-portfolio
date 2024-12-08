@@ -14,7 +14,7 @@ const projectsData = [
   {
     id: 2,
     title: 'ReciPie',
-    description: 'This project aims to develop a user-friendly recipe website that prioritizes personal preferences and offers a rich recipe pool. Users can create and save their own recipes, add favorites, and interact with other users. It has advanced search and filtering. Similar suggestions are provided for each recipe with an intelligent system. The backend will be created with Java Spring and Python (suggestion system), and the frontend will be created with HTML, CSS, and JavaScript. The project uses Azure SQL - Azure storage for data storage.',
+    description: 'This project is my university graduation project. Poject aims to develop a user-friendly recipe website that prioritizes personal preferences and offers a rich recipe pool. Users can create and save their own recipes, add favorites, and interact with other users. It has advanced search and filtering. Similar suggestions are provided for each recipe with an intelligent system. The backend will be created with Java Spring and Python (suggestion system), and the frontend will be created with HTML, CSS, and JavaScript. The project uses Azure SQL - Azure storage for data storage.',
     links:['https://github.com/Noxtrah/SE-4910','https://youtu.be/xxoclkhts14'],
     thumbnail: process.env.PUBLIC_URL + '/photos/recipiethumb.png',
     detailedImages: [
@@ -63,12 +63,16 @@ const projectsData = [
   },
   {
     id: 6,
-    title: 'Auto Tic-Tac-Toe',
-    description: 'It is a tic-tac-toe game written in C++, where both sides are "computers". You can review the codes in the github repo at the link below:',
-    links:['https://github.com/eylulozatman/tictactoe_auto'],
-    thumbnail: process.env.PUBLIC_URL + '/photos/tictac.png',
+    title: '',
+    description: 'This project aims to allow users to write reviews about the books they read.In my project, which generally consists of 5 sections, there is a welcome page, a registration and login page, a home page where we can see the book reviews of all users, a detail page where we can access the book details and read the entire review, a user profile page where we can visit the user profile and only show the book reviews of that user. I hope you find this work, which aims to increase the interaction of people who read books and are interested in writing, useful. Don`t forget to like the user reviews you like :) Flask and firebase technologies were used in the project.',
+    links:['https://github.com/eylulozatman/whitenightsbookclub'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/wnbc1.png',
     detailedImages: [
-      process.env.PUBLIC_URL + '/photos/tictactoe.png'
+      process.env.PUBLIC_URL + '/photos/wnbc.png',
+      process.env.PUBLIC_URL + '/photos/wnbc1.1.png',
+      process.env.PUBLIC_URL + '/photos/wnbc1.png', 
+      process.env.PUBLIC_URL + '/photos/wnbc3.png',
+      process.env.PUBLIC_URL + '/photos/wnbc4.png'
     ]
   },
   {
@@ -109,6 +113,16 @@ const projectsData = [
       process.env.PUBLIC_URL + '/photos/exch3.png'
     ]
       
+  },
+  {
+    id: 10,
+    title: 'Auto Tic-Tac-Toe',
+    description: 'It is a tic-tac-toe game written in C++, where both sides are "computers". You can review the codes in the github repo at the link below:',
+    links:['https://github.com/eylulozatman/tictactoe_auto'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/tictac.png',
+    detailedImages: [
+      process.env.PUBLIC_URL + '/photos/tictactoe.png'
+    ]
   }
 ];
 
