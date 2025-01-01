@@ -1,54 +1,124 @@
+
 .contact-page {
-  
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: #A5C9CA; /* Primary color */
-  
-  }
+}
 
-
-  .main{
-  display: flex;
+.main {
   flex: 1;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: 'Noto Sans', sans-serif;
+  color: 333;
+  align-items: center;
+}
+
+h1 {
   color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-  }
-  
-  
-  .contact-page h1 {
-    margin-bottom: 20px;
-  }
-  
-  .contact-info {
-    background-color: #86a6a7;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    border-radius: 4%;
-    margin-bottom: 5%;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Hafif gölge ekleyelim */
-    
-  }
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Elemanlar arası boşluk */
+  width: 100%;
+}
+
+/* Contact Item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* İçeriği yatay ortalar */
+  gap: 10px; /* İkon ile metin arası boşluk */
+  background-color: #4a5b5c;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  width: 80%; /* Genişlik ekranın %80’i */
+  max-width: 400px; /* Maksimum genişlik */
+  min-width: 200px; /* Minimum genişlik */
+  height: 50px; /* Sabit yükseklik */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.contact-item:hover {
+  background-color: #A5C9CA;
+  transform: translateY(-3px); /* Hover sırasında hafif yukarı kaldır */
+}
+
+/* İkonlar */
+.icon {
+  font-size: 1.5rem;
+}
 
 
-  .contact-info p {
-    margin: 10px 0;
+/* Tablet ve daha küçük ekranlar */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem; /* Başlık boyutu tablet için büyütüldü */
+      margin-bottom: 25px;
   }
-  
-  .contact-info a {
-    color: #0073b1; /* LinkedIn'in renk tonu */
-    text-decoration: none;
+
+  .contact-item {
+      width: 90%; /* Tablet için genişlik ayarlandı */
+      height: 40px; /* Daha yüksek elemanlar */
+      font-size: 1.1rem; /* Yazı boyutu büyütüldü */
+      padding: 15px;
   }
-  
-  .contact-info a:hover {
-    text-decoration: underline;
+
+  .icon {
+      font-size: 1.5rem; /* İkon boyutları tablet için daha büyük */
   }
+}
+
+/* Mobil cihazlar */
+@media (max-width: 480px) {
+
   
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
+  background-color: #A5C9CA; /* Primary color */
+}
+
+.main{
+
+  margin-top: 30%;
+}
+
+
+
+  h1 {
+      font-size: 1.8rem; /* Mobil için daha küçük başlık */
+      margin-bottom: 20px;
+  }
+
+  .contact-item {
+      width: 95%; /* Mobilde tam genişlik */
+      height: 50px; /* Daha yüksek elemanlar */
+      font-size: 1.1rem; /* Yazı boyutu mobil için büyütüldü */
+      padding: 20px;
+  }
+
+  .icon {
+      font-size: 1.8rem; /* Mobil ikonlar daha büyük */
+  }
+
+ 
+}
