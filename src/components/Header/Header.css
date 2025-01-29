@@ -1,66 +1,42 @@
-/* src/components/Header/Header.css */
+/* Header Tasarımı */
 .header {
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Butonlar sol köşede, başlık sağ köşede hizalanır */
-  align-items: center; /* Butonları ve başlığı dikey olarak ortalar */
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
 }
 
-.header-title {
-  font-size: 1.5em;
-  margin: 0;
-}
-.btn-container {
-
-  display: flex;
-  flex-direction: row;
-
-}
-#back-button, #contact-button {
-  background-color: #395B64;
+/* Header Buton Tasarımı */
+.nav-container button {
+  background-color: #fdc57b; /* Altın sarısı arka plan */
+  color: white; /* Beyaz yazı rengi */
+  padding: 12px 24px;
   border: none;
-  color: antiquewhite;
-  font-weight: bolder;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 23px;
-  margin: 4px 2px;
-  padding: 3%;
+  border-radius: 8px; /* Yuvarlak köşeler */
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Hafif gölge ekleyelim */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-#back-button:hover, #contact-button:hover {
-  background-color: #333;
-  color: #E7F6F2;
+/* Header Buton Hover Efekti */
+.nav-container button:hover {
+  background-color: #be3144; /* Hover durumunda kırmızı */
 }
 
-  @media (max-width: 768px) {
-    .header {
-      width: 100vw;
-      height: 10vh;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-    }
-  
-    .header-title {
-      font-size: 100%;
-      margin-bottom: 1%;
-    }
-  
-    .back-button {
-      padding: 2%;
-      font-size: 100%;
-      width: 90vw;
-      text-align: center;
-    }
-  }
-  
+/* Logo ve Menü Arasındaki Alan */
+.nav-container .logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-container .logo:hover {
+  color: #fdc57b; /* Logo üzerine geldiğinde altın sarısı */
+}

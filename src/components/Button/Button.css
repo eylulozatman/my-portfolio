@@ -1,34 +1,32 @@
+/* Buton Tasarımı */
 .custom-button {
-    background-color: #395B64;
-    border: none;
-    color: antiquewhite;
-    font-weight: bolder;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 26px;
-    margin: 4px 2px;
-    padding: 6%;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Hafif gölge ekleyelim */
-  }
-  
+  background: linear-gradient(135deg, #4caf50, #2c786c); /* Yeşil tonlarıyla geçiş */
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px; /* Yuvarlak köşeler */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), -2px -2px 8px rgba(255, 255, 255, 0.3);
+  outline: none;
+}
 
-  .custom-button:hover {
-    background-color: #333; 
-    color: #E7F6F2;
-  }
-  
-  .custom-button:active {
-    background-color: #333; 
-    color: #E7F6F2;
-  }
-  
-  .custom-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
+/* Buton Hover Efekti */
+.custom-button:hover {
+  background: linear-gradient(145deg, #4caf50, #2c786c); /* Daha belirgin geçiş */
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6), -4px -4px 16px rgba(255, 255, 255, 0.4);
+}
+
+/* Buton Aktif Durum */
+.custom-button:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3), -1px -1px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Buton Focus Durumu */
+.custom-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(51, 133, 255, 0.6); /* Mavi parıltı */
+}

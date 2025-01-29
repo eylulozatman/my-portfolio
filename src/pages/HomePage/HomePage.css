@@ -1,136 +1,121 @@
+/* Genel Sayfa Ayarları */
 .home-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #A5C9CA; /* Primary color */
-
+  font-family: 'Arial', sans-serif;
+  background-color: #1f2937; /* Koyu gri-mavi tonunda arka plan */
+  color: #e5e7eb; /* Açık gri metin rengi */
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Noto Sans', sans-serif;
-  color: 333;
-}
-
+/* Hero Bölümü */
 .hero-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(390deg, #4caf50, #2c786c); /* Yeşil tonlarıyla geçiş */
+  color: white;
   text-align: center;
-  gap: 12%;
+  padding: 100px 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
-.hero-section h1 {
+/* Hero Metni */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
+/* Hero Başlık */
+.hero-text .myname {
+  font-size: 4.5rem;
+  margin: 10px 0;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 3px;
+}
+
+/* Hero Giriş Metni */
+.hero-text .intro {
   font-size: 2.5rem;
-  margin-bottom: -10px;
+  margin: 10px 0;
+  font-weight: 400;
 }
 
-.name-sec {
-  padding: 4%;
-  border-radius: 3%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  gap: 10px;
-  background-color: #86a6a7;
-  color: #333;
-}
-
-.name-sec h1 {
-  display: flex;
-  flex-wrap: wrap;
-  color: #333; /* Renk formatını düzelttim */
-  margin-bottom: -10px;
-}
-
-.name-sec:hover {
-  background-color: #333;
-  color: #A5C9CA;
-}
-
-.name-sec:hover h1 {
-  background-color: #333;
-  color: #A5C9CA;
-}
-
-.projects-btn {
-  align-items: center;
-  margin-left: 40px;
-  margin-top: 20px;
-}
-
-#pbtn {
-  
-  padding: 5%;
-
-}
-
-
-.projects-btn i {
-
-  font-size: 35px;
-}
-
-
-.about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-
-}
-
-.about-section h2 {
+/* Hero Yazısı */
+.hero-text .software-engineer-text {
+  font-weight: bold;
   font-size: 2rem;
+  color: #004445; 
+}
+
+/* About Me Bölümü */
+.about-me-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about-me-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-me-container h2 {
+  font-size: 2.5rem;
+  color: #e5e7eb;
   margin-bottom: 20px;
 }
 
-.about-section p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+.about-me-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d1d5db; /* Açık gri metin */
+  margin-bottom: 30px;
 }
 
-.bi-arrow-bar-down {
-  margin-top: 20px;
-  font-size: 35px;
+.profile-img-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Me Butonu */
+.about-me-btn {
+  background-color: #9333ea; /* Mor tonları */
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.about-me-btn:hover {
+  background-color: #6b21a8; /* Koyu mor */
 }
 
 
-@media (max-width: 768px) {
-
-  main {
-   
-    display: flex;
-    flex-direction: column;
-    font-family:Arial, Helvetica, sans-serif;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-section {
-    display: flex;
-    flex-direction:  column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
-  }
-
-
-  .projects-btn {
-    padding-right: 15%;
-    align-items: center; /* Ensure vertical alignment */
-    margin-top: 20px;
-  
-  }
-  
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+

@@ -35,7 +35,6 @@ function ProjectDetailsPage() {
           <Slider images={project.detailedImages} />
         </div>
      </div>
-      <Footer/>
     </div>
   );
 

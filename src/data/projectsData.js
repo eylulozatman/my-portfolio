@@ -63,7 +63,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: 'White Nights Book Club (newest project)',
+    title: 'White Nights Book Club',
     description: 'This project aims to allow users to write reviews about the books they read.In my project, which generally consists of 5 sections, there is a welcome page, a registration and login page, a home page where we can see the book reviews of all users, a detail page where we can access the book details and read the entire review, a user profile page where we can visit the user profile and only show the book reviews of that user. I hope you find this work, which aims to increase the interaction of people who read books and are interested in writing, useful. Don`t forget to like the user reviews you like :) Flask and firebase technologies were used in the project.',
     links:['https://github.com/eylulozatman/whitenightsbookclub'],
     thumbnail: process.env.PUBLIC_URL + '/photos/wnbc1.png',
@@ -116,6 +116,18 @@ const projectsData = [
   },
   {
     id: 10,
+    title: 'Weather Forcast for all provinces of Turkey',
+    description: 'Detailed weather forecast project for provinces in Turkey. "https://turkiyeapi.dev/" api was used to get province names in Turkey, and "Weather API" was used to get weather information. The application was written with flask. The project generally consists of 2 parts, after selecting a province on the first page, the 7-day weather forecast for that province is displayed, and when the desired day is clicked, a more detailed hourly weather forecast for that day is given.',
+    links:['https://github.com/eylulozatman/weather-app-flask' , "weather-app-eylul-affuf6f9cxaqgehm.canadacentral-01.azurewebsites.net"],
+    thumbnail: process.env.PUBLIC_URL + '/photos/weather1.png',
+    detailedImages: [
+      process.env.PUBLIC_URL + '/photos/weather2.png', 
+      process.env.PUBLIC_URL + '/photos/weather3.png',
+      process.env.PUBLIC_URL + '/photos/weather4.png'
+    ]
+  },
+  {
+    id: 11,
     title: 'Auto Tic-Tac-Toe',
     description: 'It is a tic-tac-toe game written in C++, where both sides are "computers". You can review the codes in the github repo at the link below:',
     links:['https://github.com/eylulozatman/tictactoe_auto'],

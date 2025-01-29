@@ -1,151 +1,136 @@
+/* ProjectDetailsPage.css */
 .project-details-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #A5C9CA; /* Primary color */
+  background-color: #1f2937; /* Koyu gri-mavi tonunda arka plan */
+
+
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  flex: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-items: center;
+  
 }
 
 .project-info-detail {
-  width: 100%;
-  max-width: 900px;
-  height: 60vh; /* Sabit yükseklik */
-  display: flex;
-  flex-direction: column;    
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  background: linear-gradient(390deg, #4caf50, #2c786c); /* Yeşil tonlarıyla geçiş */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-sizing: border-box;
-  overflow: hidden; /* İçerik taşmasını engeller */
+  margin-bottom: 20px;
 }
 
 #project-title-d {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 15px;
   text-align: center;
-  border: 2px solid #333;
-  border-radius: 5px; 
-  padding: 2%;
-
- 
 }
 
 #descript {
-  margin-top: 20px;
+  font-size: 1.2rem;
+  color: seashell;
+  line-height: 1.6;
   margin-bottom: 20px;
-  font-size: larger;
-  gap: 10px;
-  text-align: center; /* İçeriği ortalar */
+  text-align: justify;
 }
 
 .project-links {
-  width: 50%;
   display: flex;
+  flex-direction: column; /* Make the links stack vertically */
+  gap: 15px;
   justify-content: center;
-  color: antiquewhite;
+  margin-top: 20px;
+  align-items: center; /* Center align the links */
 }
 
 .project-links a {
-  margin-left: 20px;
-  border: 2px solid #A5C9CA;
-  border-radius: 5px; /* Köşe yuvarlaklığını arttırdım */
-  background-color: #395B64; 
-  color: antiquewhite;
-  padding: 10px 20px; /* Daha dengeli bir padding verdim */
-  text-decoration: none; /* Altı çizili olmaması için */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Hover efekti için */
-  display: flex;
-  align-items: center; /* Dikeyde ortalama */
+  font-size: 1.1rem;
+  color: #2c786c;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #1f2937;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 80%;
+  text-align: center; 
 }
 
 .project-links a:hover {
-  background-color: #1e3035; /* Hover durumda renk değişimi */
-  color: #ffffff; /* Yazı rengini beyaz yapma */
+  color: #0056b3;
+  background-color: #b2ebf2;
+  transform: translateY(-5px); /* Slight hover effect */
 }
 
 .project-images {
-  width: 100%;
-  max-width: 800px;
-  height: 400px; /* Sabit yükseklik */
+  margin-top: 40px;
+  width: 100vh; /* Keeping the width as 100vh as per your preference */
+  height: 90vh; /* Keeping the height as 100vh as per your preference */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40px;
+  justify-content: center; 
+  background-color: #1f2937; /* Dark gray-blue background */
+
 }
 
+.project-images .slider-container {
+  width: 80%; /* Make the slider take 80% of the parent container width */
+  max-width: 100%; /* Ensure it doesn’t exceed container bounds */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; 
+  justify-self: center;
+}
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Limit the height to prevent images from being too large */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+}
 
 @media (max-width: 768px) {
+  #project-title-d {
+    font-size: 2rem;
+  }
 
-  .project-details-page {
-    display: flex;
-    font-family:Arial, Helvetica, sans-serif;
-    flex-direction: column;
-    min-height: 100vh;
-    
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-   
-  }
-  
-  .project-info-detail {
-    width: 100%;
-    max-width: 100vw;
-    height: 90%; 
-    display: flex;
-    flex-direction: column;    
-    justify-content: center;
-    align-items: center;
-    padding: 2%;
-    overflow: hidden; /* İçerik taşmasını engeller */
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: -4%;
-  }
-  
   #descript {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 100%;
-    gap: 1%;
-    text-align: center; /* İçeriği ortalar */
+    font-size: 1rem;
   }
-  
+
   .project-links {
-
+    justify-content: flex-start;
     width: 100%;
-    display: flex;
+  }
+
+  .slider-container img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  #project-title-d {
+    font-size: 1.6rem;
+  }
+
+  #descript {
+    font-size: 0.9rem;
+  }
+
+  .project-links {
     flex-direction: column;
-    justify-content:center;
-    gap: 4%;
-  }
-
- 
-  
-  .project-images {
-    width: 100%;
-    max-width: 100%;
-    height: 80%; /* Sabit yükseklik */
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    width: 100%;
   }
-  
 
+  .slider-container img {
+    max-height: 250px;
+  }
 }

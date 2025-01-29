@@ -1,8 +1,7 @@
 import React from 'react';
 import './Contact.css';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import { FaEnvelope, FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
+import Header from '../../components/Header/Header'; // Assuming you have this component
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -10,7 +9,7 @@ const Contact = () => {
       <Header />
       <div className="main">
         <h1>Contact</h1>
-        <div className="contact-container">
+        <div className="circle-container">
           {/* Mail Section */}
           <div className="contact-item">
             <FaEnvelope className="icon" />
@@ -21,7 +20,7 @@ const Contact = () => {
           {/* LinkedIn Section */}
           <div className="contact-item">
             <FaLinkedin className="icon" />
-            <a href="https://www.linkedin.com/in/eyl%C3%BCl-%C3%B6zatman-8a5a30204/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/eylulozatman/" target="_blank" rel="noopener noreferrer">
                LinkedIn Profile
             </a>
           </div>
@@ -32,15 +31,8 @@ const Contact = () => {
                GitHub Profile
             </a>
           </div>
-          {/* <div className="contact-item">
-            <FaDownload className="icon" />
-            <a href="/public/cv/mycv.pdf" download="mycv.pdf">
-              Download My CV
-            </a>
-          </div> */}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
