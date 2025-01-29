@@ -118,7 +118,7 @@ const projectsData = [
     id: 10,
     title: 'Weather Forcast for all provinces of Turkey',
     description: 'Detailed weather forecast project for provinces in Turkey. "https://turkiyeapi.dev/" api was used to get province names in Turkey, and "Weather API" was used to get weather information. The application was written with flask. The project generally consists of 2 parts, after selecting a province on the first page, the 7-day weather forecast for that province is displayed, and when the desired day is clicked, a more detailed hourly weather forecast for that day is given.',
-    links:['https://github.com/eylulozatman/weather-app-flask' , "weather-app-eylul-affuf6f9cxaqgehm.canadacentral-01.azurewebsites.net"],
+    links:['https://github.com/eylulozatman/weather-app-flask' , "https://weather-app-eylul-affuf6f9cxaqgehm.canadacentral-01.azurewebsites.net/"],
     thumbnail: process.env.PUBLIC_URL + '/photos/weather1.png',
     detailedImages: [
       process.env.PUBLIC_URL + '/photos/weather2.png', 
