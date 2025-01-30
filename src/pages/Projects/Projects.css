@@ -21,7 +21,7 @@
 
 /* Proje kartları */
 .project-item {
-  background: linear-gradient(135deg, #2d672f, #2c786c); /* Yeşil tonlarıyla geçiş */
+  background: linear-gradient(135deg, #53a256, #2c786c); /* Yeşil tonlarıyla geçiş */
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -55,6 +55,7 @@
 
 /* Link butonu */
 .link a {
+  
   color: #2f3e46;
   text-decoration: none;
   font-weight: bold;

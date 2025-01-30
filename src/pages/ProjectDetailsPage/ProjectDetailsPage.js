@@ -22,13 +22,14 @@ function ProjectDetailsPage() {
       <div className='project-info-detail'>
         <h1 id='project-title-d'>{project.title}</h1>
           <div id='descript'>{project.description}</div>
-              <div className='project-links'>
+           
+      </div>
+      <div className='project-links'>
               {project.links.map((link, index) => (
                 <a key={index} href={link} target="_blank" rel="noopener noreferrer">
                   {link}
                 </a>
               ))} 
-            </div>
       </div>
      
         <div className="project-images">

@@ -1,136 +1,180 @@
-/* ProjectDetailsPage.css */
-.project-details-page {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #1f2937; /* Koyu gri-mavi tonunda arka plan */
-
-
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+ 
 }
 
-.container {
+body {
+  background-color: #1f2937; /* Dark background */
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  justify-items: center;
-  
+/* Container for the page */
+.project-details-page {
+  display: flex;
+  flex-direction: column;
+  zoom: 94%;
+  padding-top: 3%;
+}
+
+
+.project-details-page header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Project Detail Section */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2d3748; /* Slightly lighter dark background */
+  padding-top: 3%;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .project-info-detail {
-  background: linear-gradient(390deg, #4caf50, #2c786c); /* Yeşil tonlarıyla geçiş */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 #project-title-d {
-  font-size: 2.5rem;
-  color: #1f2937;
-  margin-bottom: 15px;
-  text-align: center;
+  font-size: 2.2rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 #descript {
   font-size: 1.2rem;
-  color: seashell;
+  color: #e2e8f0; /* Light text for description */
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: justify;
 }
 
+/* Project Links Section */
 .project-links {
   display: flex;
-  flex-direction: column; /* Make the links stack vertically */
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-  align-items: center; /* Center align the links */
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .project-links a {
-  font-size: 1.1rem;
-  color: #2c786c;
+  color: #4caf50;
   text-decoration: none;
-  padding: 10px;
-  background-color: #1f2937;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  width: 80%;
-  text-align: center; 
+  font-size: 1.1rem;
+  margin: 5px 0;
+  transition: color 0.3s ease;
 }
 
 .project-links a:hover {
-  color: #0056b3;
-  background-color: #b2ebf2;
-  transform: translateY(-5px); /* Slight hover effect */
+  color: #fff;
+  text-decoration: underline;
 }
 
+/* Slider Section */
 .project-images {
-  margin-top: 40px;
-  width: 100vh; /* Keeping the width as 100vh as per your preference */
-  height: 90vh; /* Keeping the height as 100vh as per your preference */
-  display: flex;
-  justify-content: center; 
-  background-color: #1f2937; /* Dark gray-blue background */
-
-}
-
-.project-images .slider-container {
-  width: 80%; /* Make the slider take 80% of the parent container width */
-  max-width: 100%; /* Ensure it doesn’t exceed container bounds */
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  justify-content: center; 
-  justify-self: center;
 }
 
-.slider-container img {
+.project-images img {
   width: 100%;
   height: auto;
-  max-height: 400px; /* Limit the height to prevent images from being too large */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
+/* Footer Styling */
+footer {
+  background-color: #1f2937; /* Dark footer */
+  color: #e2e8f0;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* For Mobile Devices */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  #project-title-d {
+    font-size: 1.8rem;
+  }
+  #descript {
+    font-size: 1rem;
+    height: 180px; /* Set a height for description */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    padding-right: 10px; /* Add padding to prevent text from being too close to the scrollbar */
+  }
+  .project-links a {
+    font-size: 1rem;
+  }
+
+  .project-images {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* For Tablets */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
   #project-title-d {
     font-size: 2rem;
   }
 
   #descript {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  .project-links {
-    justify-content: flex-start;
+  .project-links a {
+    font-size: 1.1rem;
+  }
+
+  .project-images {
     width: 100%;
+    max-width: 90%;
   }
 
-  .slider-container img {
-    max-height: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  #project-title-d {
-    font-size: 1.6rem;
-  }
-
-  #descript {
+  footer p {
     font-size: 0.9rem;
   }
-
-  .project-links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .slider-container img {
-    max-height: 250px;
-  }
 }
+
