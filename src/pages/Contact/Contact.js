@@ -20,7 +20,7 @@ const Contact = () => {
           {/* LinkedIn Section */}
           <div className="contact-item">
             <FaLinkedin className="icon" />
-            <a href="https://www.linkedin.com/in/eylulozatman/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/eyl%C3%BCl-%C3%B6zatman-8a5a30204/" target="_blank" rel="noopener noreferrer">
                LinkedIn Profile
             </a>
           </div>
