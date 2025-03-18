@@ -17,7 +17,7 @@ const Contact = () => {
               eylulozatman@gmail.com
             </a>
           </div>
-          {/* LinkedIn Section */}
+          {/* LinkedIn Section - link fixed*/}
           <div className="contact-item">
             <FaLinkedin className="icon" />
             <a href="https://www.linkedin.com/in/eyl%C3%BCl-%C3%B6zatman-8a5a30204/" target="_blank" rel="noopener noreferrer">
