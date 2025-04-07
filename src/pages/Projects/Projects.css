@@ -6,8 +6,8 @@
   width: 100%;
   margin: 0 auto;
   padding: 50px 0;
-  background-color: #1f2937; /* Arkaplan rengi */
-  color: #cad2c5; /* Genel metin rengi */
+  background-color: #1f2937;
+  color: #cad2c5;
 }
 
 /* Proje listesi */
@@ -21,11 +21,10 @@
 
 /* Proje kartları */
 .project-item {
-  background: linear-gradient(135deg, #53a256, #2c786c); /* Yeşil tonlarıyla geçiş */
+  background: linear-gradient(135deg, #53a256, #2c786c);
   border-radius: 12px;
   overflow: hidden;
   display: flex;
-  align-items: center;
   transition: transform 0.3s ease-in-out;
   height: 300px; /* Sabit yükseklik */
 }
@@ -38,29 +37,45 @@
 .project-info {
   flex: 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0; /* Bu satır önemli, içerik taşmasını önler */
 }
 
 .project-info h1 {
-  font-size: 22px;
+  font-size: clamp(16px, 2vw, 22px); /* Responsive font boyutu */
   margin-bottom: 10px;
   color: #2f3e46;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Maksimum 2 satır */
+  -webkit-box-orient: vertical;
 }
 
 .project-info p {
-  margin-top: 15px;
-  font-size: 16px;
+  font-size: 14px;
   color: #cad2c5;
-  margin-bottom: 15px;
+  margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Maksimum 3 satır */
+  -webkit-box-orient: vertical;
 }
 
 /* Link butonu */
+.link {
+  margin-top: auto; /* Butonu en alta yapıştırır */
+}
+
 .link a {
-  
   color: #2f3e46;
   text-decoration: none;
   font-weight: bold;
-  font-size: px;
-
+  font-size: 14px;
+  display: inline-block;
 }
 
 .link a:hover {
@@ -68,23 +83,20 @@
 }
 
 /* Proje fotoğrafı */
-
 .project-photo {
   flex: 1;
+  min-width: 0; /* Bu satır önemli, resim taşmasını önler */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  max-width: 50%;
 }
 
 .project-photo img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain; /* Görseli orantılı bir şekilde sığdır */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Sayfalama */
@@ -129,5 +141,10 @@
   .project-photo {
     width: 100%;
     height: 200px;
+    max-width: 100%;
+  }
+  
+  .project-info h1 {
+    -webkit-line-clamp: 1; /* Mobilde başlık tek satır */
   }
 }
