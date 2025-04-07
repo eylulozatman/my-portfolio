@@ -128,6 +128,19 @@ const projectsData = [
   },
   {
     id: 11,
+    title: 'BOOK book recommender system -collaborative filtering (user-based , item based)',
+    description: 'This project offers book recommendations using user-based and item-based collaborative filtering algorithms. First, the model_trainer.py file should be run to create and save the recommendation models. Then, by running the app.py file, recommendations can be retrieved based on users or books. Models are trained and saved using the Surprise library, based on user rating data. Users can receive suggestions based on preferences of similar users or get books similar to a selected one.',
+    links:['https://github.com/eylulozatman/bookRecSystemSurprise'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/collfilter.png',
+    detailedImages: [
+      process.env.PUBLIC_URL + '/photos/collfilter1.png', 
+      process.env.PUBLIC_URL + '/photos/collfilter2.png',
+      process.env.PUBLIC_URL + '/photos/collfilter3.png',
+      process.env.PUBLIC_URL + '/photos/collfilter4.png'
+    ]
+  },
+  {
+    id: 12,
     title: 'Auto Tic-Tac-Toe',
     description: 'It is a tic-tac-toe game written in C++, where both sides are "computers". You can review the codes in the github repo at the link below:',
     links:['https://github.com/eylulozatman/tictactoe_auto'],
