@@ -154,15 +154,16 @@ const projectsData = [
     title: 'BOOK book recommender system - advanced',
     description: 'In addition to the book recommendation system project developed using the Surprise library, there is a login module in the advanced version. You can log in by entering existing user IDs or creating your own ID. You can add books to your own library and display recommendations for these books. Although the collaborative filtering approach is predominantly used, recommendations for the user are presented with a hybrid approach by also taking advantage of author similarity.',
     links:['https://github.com/eylulozatman/bookRecSystemSurprise'],
-    thumbnail: process.env.PUBLIC_URL + '/photos/bookrec1.png',
+    thumbnail: process.env.PUBLIC_URL + '/photos/bookrec5.png',
     detailedImages: [
+        process.env.PUBLIC_URL + '/photos/bookrec7.png',
       process.env.PUBLIC_URL + '/photos/bookrec1.png', 
       process.env.PUBLIC_URL + '/photos/bookrec2.png',
       process.env.PUBLIC_URL + '/photos/bookrec3.png',
       process.env.PUBLIC_URL + '/photos/bookrec4.png',
       process.env.PUBLIC_URL + '/photos/bookrec5.png',
-      process.env.PUBLIC_URL + '/photos/bookrec6.png',
-      process.env.PUBLIC_URL + '/photos/bookrec7.png'
+      process.env.PUBLIC_URL + '/photos/bookrec6.png'
+    
     ]
   },
   {
