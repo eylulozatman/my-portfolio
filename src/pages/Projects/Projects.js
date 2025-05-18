@@ -51,15 +51,17 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => (
     </button>
   </div>
 );
-
 function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
 
+  // Create a reversed copy of the projects array
+  const reversedProjects = [...projectsData].reverse();
+
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = projectsData.slice(indexOfFirstProject, indexOfLastProject);
-  const totalPages = Math.ceil(projectsData.length / projectsPerPage);
+  const currentProjects = reversedProjects.slice(indexOfFirstProject, indexOfLastProject);
+  const totalPages = Math.ceil(reversedProjects.length / projectsPerPage);
 
   const handlePageChange = (pageNumber) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
