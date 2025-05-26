@@ -52,7 +52,7 @@ const projectsData = [
     id: 5,
     title: 'TDK word Search',
     description: 'This project was developed to filter Turkish words briefly. After any keyword is written, for example, words starting with "n", containing "n" and ending with "n" are listed. First of all, you will need this command, then you can use this api and make improvements with npm install tdk-all-api --save.e.',
-    links:['https://github.com/eylulozatman/TDKwordSearch'],
+    links:['https://github.com/eylulozatman/TDKwordSearch', 'https://eylulozatman.github.io/TDKwordSearch/'],
     thumbnail: process.env.PUBLIC_URL + '/photos/tdk3.png',
     detailedImages: [
       process.env.PUBLIC_URL + '/photos/tdk1.png', 

@@ -89,21 +89,14 @@
   object-fit: cover;
 }
 
-/* About Me Butonu */
-.about-me-btn {
-  background-color: #9333ea; /* Mor tonları */
-  color: #ffffff;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+.homepage-btns {
+  display: flex;
+  flex-direction: column; /* Dikey hizalama için */
+  gap: 15px; /* Butonlar arası boşluk */
+  align-items: center; /* İstersen ortalar */
+  margin-top: 20px;
 }
 
-.about-me-btn:hover {
-  background-color: #6b21a8; /* Koyu mor */
-}
 
 
 /* Scrollbar Styling */

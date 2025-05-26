@@ -4,69 +4,85 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
- 
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Yatay taşmayı engelle */
   background-color: #1f2937; /* Dark background */
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
 }
 
-/* Container for the page */
+/* Page Layout */
 .project-details-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   zoom: 94%;
   padding-top: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-
+/* Header */
 .project-details-page header h1 {
   font-size: 2.2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
 }
 
-/* Project Detail Section */
+/* Container */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2d3748; /* Slightly lighter dark background */
-  padding-top: 3%;
+  background-color: #2d3748;
+  padding: 3% 5%;
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
 }
 
+/* Project Info */
 .project-info-detail {
   max-width: 900px;
   text-align: center;
   margin-bottom: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
+/* Title */
 #project-title-d {
   font-size: 2.2rem;
   color: #4caf50;
   margin-bottom: 10px;
   font-weight: 700;
+  word-break: break-word;
 }
 
+/* Description */
 #descript {
   font-size: 1.2rem;
-  color: #e2e8f0; /* Light text for description */
+  color: #e2e8f0;
   line-height: 1.6;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
-/* Project Links Section */
+/* Project Links */
 .project-links {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
+  word-wrap: break-word;
 }
 
 .project-links a {
@@ -75,6 +91,11 @@ body {
   font-size: 1.1rem;
   margin: 5px 0;
   transition: color 0.3s ease;
+  max-width: 100%;
+  display: inline-block;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
 }
 
 .project-links a:hover {
@@ -82,7 +103,7 @@ body {
   text-decoration: underline;
 }
 
-/* Slider Section */
+/* Images */
 .project-images {
   width: 100%;
   max-width: 800px;
@@ -95,24 +116,29 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  display: block;
+  max-width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
-  background-color: #1f2937; /* Dark footer */
+  background-color: #1f2937;
   color: #e2e8f0;
   padding: 20px;
   text-align: center;
+  width: 100%;
 }
 
 footer p {
   font-size: 0.9rem;
+  word-break: break-word;
 }
 
 footer a {
   color: #4caf50;
   text-decoration: none;
+  word-break: break-word;
 }
 
 footer a:hover {
@@ -120,9 +146,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
-/* For Mobile Devices */
+/* Mobile Devices */
 @media screen and (max-width: 600px) {
+  .project-details-page {
+    padding-top: 5%;
+  }
+
   .container {
     padding: 20px;
   }
@@ -130,14 +159,17 @@ footer a:hover {
   #project-title-d {
     font-size: 1.8rem;
   }
+
   #descript {
     font-size: 1rem;
-    height: 180px; /* Set a height for description */
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
-    padding-right: 10px; /* Add padding to prevent text from being too close to the scrollbar */
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
   }
+
   .project-links a {
     font-size: 1rem;
+    font-size: clamp(0.8rem, 3vw, 1rem); /* font küçülmesi için */
   }
 
   .project-images {
@@ -150,7 +182,7 @@ footer a:hover {
   }
 }
 
-/* For Tablets */
+/* Tablet */
 @media screen and (max-width: 768px) {
   .container {
     padding: 30px;
@@ -169,7 +201,6 @@ footer a:hover {
   }
 
   .project-images {
-    width: 100%;
     max-width: 90%;
   }
 
@@ -177,4 +208,3 @@ footer a:hover {
     font-size: 0.9rem;
   }
 }
-

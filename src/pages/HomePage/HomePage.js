@@ -31,7 +31,10 @@ function HomePage() {
               <img src={process.env.PUBLIC_URL + '/photos/myicon.png'} alt="Eylül Özatman" className="profile-img" />
             </div>
             <p>Hi! I'm Eylül Özatman, a Software Engineer passionate about technology and problem-solving. I graduated from Yaşar University in 2024. Always excited to work on new ideas and innovative projects. My curiosity drives me to explore the latest technologies, and I'm eager to turn creative concepts into reality.</p>
+            <div className='homepage-btns'>
             <Button onClick={() => navigate('/projects')} className="about-me-btn">Check out my Projects</Button>
+            <Button onClick={() => navigate('/ac-projects')}>  Accessible Projects </Button>
+            </div>
           </div>
         </section>
       </div>
