@@ -3,8 +3,6 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import Projects from './pages/Projects/Projects';
 import ProjectDetailsPage from './pages/ProjectDetailsPage/ProjectDetailsPage';
-import Contact from './pages/Contact/Contact';
-import AcProjects from './pages/AcProjects/AcProjects';
 
 import './App.css';
 
@@ -14,9 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:id" element={<ProjectDetailsPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/ac-projects" element={<AcProjects />} />
+        <Route path="/projects/:source/:id" element={<ProjectDetailsPage />} />
       </Routes>
     </Router>
   );

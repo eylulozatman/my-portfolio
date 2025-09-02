@@ -1,115 +1,202 @@
-/* Genel Sayfa Ayarları */
 .home-page {
-  font-family: 'Arial', sans-serif;
-  background-color: #1f2937; /* Koyu gri-mavi tonunda arka plan */
-  color: #e5e7eb; /* Açık gri metin rengi */
-  margin: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+
+}
+
+/* Header ve Skills Yan Yana */
+.header-skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 60vh;
+}
+
+/* Header Stili */
+.header-skills-container .header {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  text-align: left;
+}
+
+.header-skills-container .header-content {
   padding: 0;
 }
 
-/* Hero Bölümü */
-.hero-section {
-  background: linear-gradient(390deg, #4caf50, #2c786c); /* Yeşil tonlarıyla geçiş */
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-  border-radius:  0 0 3px 3px;
-}
-
-/* Hero Metni */
-.hero-text {
-  margin-top: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-/* Hero Başlık */
-.hero-text .myname {
-  font-size: 4.5rem;
-  margin: 10px 0;
+.header-skills-container .header-name {
+  font-size: 3.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
   font-weight: 700;
-  color: #1f2937;
-  letter-spacing: 3px;
 }
 
-/* Hero Giriş Metni */
-.hero-text .intro {
-  font-size: 2.5rem;
-  margin: 10px 0;
-  font-weight: 400;
-}
-
-/* Hero Yazısı */
-.hero-text .software-engineer-text {
-  font-weight: bold;
-  font-size: 2rem;
-  color: #004445; 
-}
-
-/* About Me Bölümü */
-.about-me-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.about-me-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.about-me-container h2 {
-  font-size: 2.5rem;
-  color: #e5e7eb;
+.header-skills-container .header-title {
+  font-size: 1.8rem;
+  color: #3498db;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-.about-me-container p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #d1d5db; /* Açık gri metin */
+.header-description {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.profile-img-container {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.homepage-btns {
+/* Skills Section Container */
+.skills-container {
   display: flex;
-  flex-direction: column; /* Dikey hizalama için */
-  gap: 15px; /* Butonlar arası boşluk */
-  align-items: center; /* İstersen ortalar */
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
+/* About Me Section */
+.about-me-section {
+  min-height: 60vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background-color: #fff;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #4b5563;
-  border-radius: 10px;
+.about-me-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-::-webkit-scrollbar-track {
-  background: #1f2937;
+/* Projects Section container sadece görünüm ve spacing */
+.projects-section {
+  min-height: 80vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background-color: #fff;
 }
 
+.projects-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Projects actions buttons container */
+.projects-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.view-all-btn {
+  min-width: 200px;
+}
+
+.view-all-btn.secondary {
+  background: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.view-all-btn.secondary:hover {
+  background: #3498db;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-skills-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .header-skills-container .header {
+    text-align: center;
+  }
+  
+  .header-skills-container .header-name {
+    font-size: 3rem;
+  }
+  
+  .header-skills-container .header-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-skills-container {
+    padding: 40px 20px;
+  }
+  
+  .header-skills-container .header-name {
+    font-size: 2.5rem;
+  }
+  
+  .header-skills-container .header-title {
+    font-size: 1.3rem;
+  }
+  
+  .header-description {
+    font-size: 1.1rem;
+  }
+
+  .homepage-btns,
+  .projects-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .view-all-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-skills-container .header-name {
+    font-size: 2rem;
+  }
+  
+  .header-skills-container .header-title {
+    font-size: 1.1rem;
+  }
+  
+  .header-description {
+    font-size: 1rem;
+  }
+  
+  .about-me-section,
+  .projects-section {
+    padding: 60px 15px;
+  }
+}

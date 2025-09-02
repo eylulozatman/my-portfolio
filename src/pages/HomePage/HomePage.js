@@ -1,43 +1,80 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
+import AboutMeAnim from '../../components/AboutMeAnim/AboutMeAnim';
+import SkillsSection from '../../components/SkillsSection/SkillsSection';
+import Contact from '../../components/Contact/Contact';
+import ProjectPreview from '../../components/ProjectPreview/ProjectPreview'; 
+import Navbar from '../../components/Navbar/Navbar'; 
+
 
 function HomePage() {
   const navigate = useNavigate();
+  const [visibleSections, setVisibleSections] = useState({
+    about: false,
+    skills: false,
+    projects: false,
+    contact: false
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      
+      setVisibleSections({
+        about: scrollPosition > (document.getElementById('about-me-section')?.offsetTop || 0) + 100,
+        skills: scrollPosition > (document.getElementById('skills-section')?.offsetTop || 0) + 100,
+        projects: scrollPosition > (document.getElementById('projects-section')?.offsetTop || 0) + 100,
+        contact: scrollPosition > (document.getElementById('contact-section')?.offsetTop || 0) + 100
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    setTimeout(handleScroll, 500);
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="home-page">
-
-  
-      <section className="hero-section"> 
-      <Header />
-        <div className="hero-text">
-          <h1 className="myname">Eylül Özatman</h1>
-          <p className="intro">
-            <span className="software-engineer-text">Software Engineer</span>
+       <Navbar />
+      {/* Header ve Skills Yan Yana */}
+      <div className="header-skills-container">
+        <div>
+          <Header />
+          <p className="header-description">
+            Creating innovative solutions through code and creativity
           </p>
+        </div>
+        <div className="skills-container">
+          <SkillsSection />
+        </div>
+      </div>
+
+      {/* About Me Section */}
+      <section id="about-me-section" className={`about-me-section ${visibleSections.about ? 'visible' : ''}`}>
+        <AboutMeAnim />
+     
+      </section>
+
+      {/* Projects Section - Yeni ProjectPreview componenti */}
+      <section id="projects-section" className={`projects-section ${visibleSections.projects ? 'visible' : ''}`}>
+        <h2>Featured Projects</h2>      
+        <ProjectPreview />
+        
+        <div className="projects-actions">
+          <Button onClick={() => navigate('/projects')} className="view-all-btn">
+            View All Projects
+          </Button>
+          
         </div>
       </section>
 
-      <div className="content">
-        {/* About Me Section */}
-        <section className="about-me-section">
-          <div className="about-me-container">
-            <h2>About Me</h2>
-            <div className="profile-img-container">
-              <img src={process.env.PUBLIC_URL + '/photos/myicon.png'} alt="Eylül Özatman" className="profile-img" />
-            </div>
-            <p>Hi! I'm Eylül Özatman, a Software Engineer passionate about technology and problem-solving. I graduated from Yaşar University in 2024. Always excited to work on new ideas and innovative projects. My curiosity drives me to explore the latest technologies, and I'm eager to turn creative concepts into reality.</p>
-            <div className='homepage-btns'>
-            <Button onClick={() => navigate('/projects')} className="about-me-btn">Check out my Projects</Button>
-            <Button onClick={() => navigate('/ac-projects')}>  Accessible Projects </Button>
-            </div>
-          </div>
-        </section>
-      </div>
+      {/* Contact Section */}
+      <Contact />
 
       <Footer />
     </div>

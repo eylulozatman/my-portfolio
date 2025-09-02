@@ -178,6 +178,17 @@ const projectsData = [
       process.env.PUBLIC_URL + '/photos/recipe3.png'
     ]
   },
+  {
+    id: 15,
+    title: 'İZMİR KIZ LİSESİ MEZUN AĞI (iklmezun.org)',
+    description: 'This is a social network project developed to provide a common platform for graduates of Izmir Kız High School. Since Im also an alumni of this high school, developing the site was a pleasure. .Net was used for the backend and React for the frontend. Database and distribution processes were handled using Azure. Active development continues.',
+    links:['https://iklmezun.org/'],
+    thumbnail: process.env.PUBLIC_URL + '/photos/iklmezun.png',
+    detailedImages: [
+      process.env.PUBLIC_URL + '/photos/iklmezun.png'
+    ]
+  }
+
 
   
 

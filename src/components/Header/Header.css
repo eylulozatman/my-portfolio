@@ -1,42 +1,101 @@
-/* Header Tasarımı */
 .header {
-  padding: 0;
-  position: relative;
-  z-index: 10;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-/* Header Buton Tasarımı */
-.nav-container button {
-  background-color: #fdc57b; /* Altın sarısı arka plan */
-  color: white; /* Beyaz yazı rengi */
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px; /* Yuvarlak köşeler */
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-/* Header Buton Hover Efekti */
-.nav-container button:hover {
-  background-color: #be3144; /* Hover durumunda kırmızı */
-}
-
-/* Logo ve Menü Arasındaki Alan */
-.nav-container .logo {
-  font-size: 2rem;
+  background: linear-gradient(135deg, #2c3e50 80%, #34495e 100%);
   color: white;
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.nav-container .logo:hover {
-  color: #fdc57b; /* Logo üzerine geldiğinde altın sarısı */
+.header-content {
+  max-width: 1200px;
+  margin-left: 3%;
+  padding: 0 20px;
+}
+
+.header-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: white;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInFromLeft 1s ease-out 0.5s forwards;
+}
+
+.header-title {
+  font-size: 1.3rem;
+  color: #3498db;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInFromLeft 1s ease-out 0.8s forwards;
+}
+
+/* Animasyon */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Ekstra efekt için */
+.header-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #3498db;
+  animation: expandLine 1.5s ease-out 1.5s forwards;
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-name {
+    font-size: 2rem;
+    animation: slideInFromLeft 0.8s ease-out 0.5s forwards;
+  }
+  
+  .header-title {
+    font-size: 1.1rem;
+    animation: slideInFromLeft 0.8s ease-out 0.8s forwards;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 0;
+  }
+  
+  .header-name {
+    font-size: 1.8rem;
+    animation: slideInFromLeft 0.7s ease-out 0.5s forwards;
+  }
+  
+  .header-title {
+    font-size: 1rem;
+    animation: slideInFromLeft 0.7s ease-out 0.8s forwards;
+  }
+}
+
+/* Daha smooth animasyon için */
+.header-name, .header-title {
+  will-change: transform, opacity;
 }
