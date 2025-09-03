@@ -1,11 +1,8 @@
-.contact-section {
-  min-height: 50vh;
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f9fa;
+
+.contact-inner {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
 }
 
 .contact-section h2 {

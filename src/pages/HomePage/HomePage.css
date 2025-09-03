@@ -117,9 +117,55 @@
   justify-content: center;
 }
 
-.view-all-btn {
+.projects-actions .view-all-btn {
+  margin-top: 1vh;
   min-width: 200px;
+  padding: 15px 35px; /* custom buton padding’i yerine bunu kullan */
+  font-size: 1.1rem;
+  background: #2980b9;
+  color: white;
+  border-radius: 25px;
 }
+
+.view-all-btn {
+  margin-top: 20px; /* istediğin değer */
+}
+
+.contact-section {
+  min-height: 60vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 1s ease, transform 1s ease; /* animasyon hızı ayarlı */
+  background-color: #f9f9f9;
+}
+
+.contact-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .view-all-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-all-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    min-width: 150px;
+  }
+}
+
+
 
 .view-all-btn.secondary {
   background: transparent;

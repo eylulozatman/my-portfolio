@@ -66,15 +66,25 @@ function HomePage() {
         <ProjectPreview />
         
         <div className="projects-actions">
-          <Button onClick={() => navigate('/projects')} className="view-all-btn">
-            View All Projects
-          </Button>
-          
-        </div>
+        <Button 
+          onClick={() => navigate('/projects')} 
+          className="view-all-btn"
+          style={{ marginTop: '20px' }}
+        >
+          View All Projects
+        </Button>
+
+      </div>
+
       </section>
 
-      {/* Contact Section */}
-      <Contact />
+     <section 
+        id="contact-section" 
+        className={`contact-section ${visibleSections.contact ? 'visible' : ''}`}
+      >
+        <Contact />
+      </section>
+
 
       <Footer />
     </div>

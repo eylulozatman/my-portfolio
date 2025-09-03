@@ -1,17 +1,15 @@
 import React from 'react';
-import './Contact.css';
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import './Contact.css';
 
 const Contact = () => {
   return (
-    <section id="contact-section" className="contact-section">
+    <div className="contact-inner">
       <h2>Get In Touch</h2>
       <div className="contact-info">
         <div className="contact-item">
           <FaEnvelope className="contact-icon" />
-          <a href="mailto:eylulozatman@gmail.com">
-            eylulozatman@gmail.com
-          </a>
+          <a href="mailto:eylulozatman@gmail.com">eylulozatman@gmail.com</a>
         </div>
         <div className="contact-item">
           <FaLinkedin className="contact-icon" />
@@ -26,7 +24,7 @@ const Contact = () => {
           </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
