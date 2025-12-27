@@ -1,193 +1,127 @@
-/* Container */
 .project-preview {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  width: 80%;
-  height: 70%;
 }
 
-/* Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 45px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
 }
 
-/* Card */
 .project-card {
-  margin-top: 2%;
-  background: #ffffff;
-  padding: 4%;
-  border-radius: 15px;
+  background: var(--bg-card);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
-/* Project Image */
 .project-image {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 250px; /* Kareye yakın */
+  height: 200px;
+  overflow: hidden;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: var(--transition);
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Overlay on image */
 .project-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(52, 152, 219, 0.6);
+  background: rgba(15, 23, 42, 0.6);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--transition);
+  backdrop-filter: blur(4px);
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
-/* View Details Button */
 .view-details-btn {
-  background: #ffffff;
-  color: #3498db;
-  border: none;
-  padding: 10px 20px;
+  background: white;
+  color: var(--bg-dark);
+  padding: 10px 24px;
+  border-radius: 30px;
   font-weight: 600;
-  border-radius: 25px;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .view-details-btn:hover {
-  background: #3498db;
-  color: #ffffff;
+  transform: scale(1.05);
+  background: var(--primary);
+  color: white;
 }
 
-/* Content */
 .project-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  padding: 24px;
+  flex-grow: 1;
 }
 
 .project-content h3 {
   font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--text-main);
   font-weight: 700;
-  color: #2c3e50;
-  margin: 0;
 }
 
 .project-content p {
-  font-size: 1rem;
-  color: #7f8c8d;
-  margin: 0;
-  line-height: 1.5;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-
-.project-link:hover {
-  background: #3498db;
-  color: #fff;
-}
-
-/* Extra Links Section (hover ile açılır) */
 .project-extra {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
+  padding: 0 24px 24px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 20px 0 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.project-card:hover .project-extra {
-  max-height: 200px; /* Yeterli alan */
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Extra Link Style */
 .project-extra a {
-  text-decoration: none;
-  color: #fff;
-  background: #3498db;
-  padding: 8px 15px;
-  border-radius: 20px;
+  font-size: 0.85rem;
   font-weight: 600;
-  text-align: center;
-  transition: background 0.3s ease;
+  color: var(--primary);
+  transition: var(--transition);
 }
 
 .project-extra a:hover {
-  background: #2980b9;
+  color: var(--secondary);
+  text-decoration: none;
+  transform: translateY(-2px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .project-image {
-    height: 200px;
-  }
-
-  .project-content h3 {
-    font-size: 1.2rem;
-  }
-
-  .project-content p {
-    font-size: 0.95rem;
-  }
-
-  .project-link {
-    font-size: 0.85rem;
-    padding: 5px 12px;
-  }
-}
-
-@media (max-width: 480px) {
   .projects-grid {
-    gap: 20px;
-  }
-
-  .project-image {
-    height: 150px;
-  }
-
-  .project-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-content p {
-    font-size: 0.9rem;
-  }
-
-  .project-link {
-    font-size: 0.8rem;
-    padding: 4px 10px;
+    grid-template-columns: 1fr;
+    padding: 20px;
   }
 }

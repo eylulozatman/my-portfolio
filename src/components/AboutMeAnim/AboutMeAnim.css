@@ -4,8 +4,8 @@
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
-  gap: 30px;
-  padding: 40px 20px;
+  gap: 40px;
+  padding: 60px 20px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -17,12 +17,50 @@
 }
 
 /* Profil Foto */
+.profile-img-wrapper {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.profile-img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 4px dashed var(--primary);
+  opacity: 0.4;
+  transition: var(--transition);
+}
+
+.profile-img-wrapper:hover::after {
+  opacity: 1;
+  border-style: dashed;
+  border-color: var(--primary);
+  animation: rotateRing 6s linear infinite;
+  transform: scale(1.12);
+}
+
 .profile-img-container {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border: 4px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.profile-img-wrapper:hover .profile-img-container {
+  transform: scale(0.95);
 }
 
 .profile-img {
@@ -31,12 +69,22 @@
   object-fit: cover;
 }
 
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg) scale(1.1);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
 /* Hakkımda Metin */
 .about-me-text {
   text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #2c3e50;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-main);
 }
 
 .about-me-text p {
@@ -45,35 +93,42 @@
 
 /* Mavi Ayırıcı Çizgi */
 .divider {
-  width: 80px;
+  width: 60px;
   height: 4px;
-  background: #3498db;
-  margin: 20px 0;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  margin: 10px 0;
   border-radius: 2px;
 }
 
 /* Education Bölümü */
 .education-section {
   text-align: center;
+  width: 100%;
 }
 
 .education-section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--text-main);
+  font-weight: 800;
 }
 
 /* Eğitim Kartı */
 .edu-card {
   position: relative;
   display: inline-block;
-  background: #ecf0f1;
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  background: var(--bg-card);
+  padding: 30px 40px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: var(--text-main);
   overflow: hidden;
+}
+
+.edu-card strong {
+  color: var(--text-main);
 }
 
 /* Mezuniyet Kepi Animasyonu */
@@ -84,23 +139,57 @@
 }
 
 @keyframes jumpCap {
-  0% { transform: translateY(0) rotate(-15deg); }
-  50% { transform: translateY(-10px) rotate(0deg); }
-  100% { transform: translateY(0) rotate(15deg); }
+  0% {
+    transform: translateY(0) rotate(-15deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(15deg);
+  }
 }
-
-
-
 
 /* Responsive */
 @media (max-width: 768px) {
-  .profile-img-container { width: 120px; height: 120px; }
-  .about-me-text { font-size: 1.1rem; }
-  .edu-card { padding: 15px 20px; font-size: 1rem; }
+  .profile-img-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-img-container {
+    width: 130px;
+    height: 130px;
+  }
+
+  .about-me-text {
+    font-size: 1.1rem;
+  }
+
+  .edu-card {
+    padding: 20px 25px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .profile-img-container { width: 100px; height: 100px; }
-  .about-me-text { font-size: 1rem; }
-  .edu-card { padding: 10px 15px; font-size: 0.95rem; }
+  .about-me-container {
+    padding: 40px 15px;
+  }
+
+  .profile-img-wrapper {
+    width: 130px;
+    height: 130px;
+  }
+
+  .profile-img-container {
+    width: 110px;
+    height: 110px;
+  }
+
+  .about-me-text {
+    font-size: 1rem;
+  }
 }

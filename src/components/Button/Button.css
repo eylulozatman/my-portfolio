@@ -12,10 +12,14 @@
   position: relative;
   overflow: hidden;
   display: inline-flex;
+  transition: var(--transition);
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-width: 120px;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
 .custom-button::before {
@@ -30,9 +34,13 @@
 }
 
 .custom-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
-  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary));
+}
+
+.custom-button:active {
+  transform: translateY(0);
 }
 
 .custom-button:hover::before {
@@ -151,8 +159,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Sizes */
@@ -174,7 +187,7 @@
     padding: 12px 25px;
     font-size: 1rem;
   }
-  
+
   .custom-button.large {
     padding: 15px 30px;
     font-size: 1.1rem;
@@ -187,7 +200,7 @@
     font-size: 0.9rem;
     min-width: 100px;
   }
-  
+
   .custom-button.large {
     padding: 12px 25px;
     font-size: 1rem;

@@ -15,14 +15,16 @@ function AboutMeAnim() {
   }, []);
 
   return (
-    <div id="about-me-section" className={`about-me-container ${visible ? 'fade-in' : ''}`}>
+    <div className={`about-me-container ${visible ? 'fade-in' : ''}`}>
       {/* Profil Foto */}
-      <div className="profile-img-container">
-        <img 
-          src={process.env.PUBLIC_URL + '/photos/mypp.jpg'} 
-          alt="Eylül Özatman" 
-          className="profile-img"
-        />
+      <div className="profile-img-wrapper">
+        <div className="profile-img-container">
+          <img
+            src={process.env.PUBLIC_URL + '/photos/mypp.jpg'}
+            alt="Eylül Özatman"
+            className="profile-img"
+          />
+        </div>
       </div>
 
       {/* Hakkımda Metin */}
@@ -43,7 +45,7 @@ function AboutMeAnim() {
         <div className="edu-card">
           <p><strong>Yaşar University</strong> – Software Engineering (BSc)</p>
           <p>2019 - 2024 {showCap && <span className="grad-cap">🎓</span>}</p>
-      
+
         </div>
       </div>
     </div>
