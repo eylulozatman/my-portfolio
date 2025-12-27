@@ -52,6 +52,38 @@
 .navbar-menu {
   display: flex;
   gap: 30px;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+  transform: rotate(30deg) scale(1.1);
+  background: var(--primary);
+  color: white;
+}
+
+.navbar-mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle.mobile {
+  display: none;
 }
 
 .nav-item {
@@ -172,5 +204,9 @@
 
   .navbar-toggle {
     display: block;
+  }
+
+  .theme-toggle.mobile {
+    display: flex;
   }
 }
